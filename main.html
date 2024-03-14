@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EleganceVerify - Online Video KYC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>EleganceVerify - Online Video KYC</h1>
+  </header>
+  <main>
+    <form id="kycForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="panAadhaar">PAN Card/Aadhaar:</label>
+        <input type="text" id="panAadhaar" name="panAadhaar" required>
+      </div>
+      <div class="form-group">
+        <label for="signature">Signature:</label>
+        <input type="file" id="signature" name="signature" accept="image/*" required>
+      </div>
+      <div class="form-group">
+        <label for="incomeRange">Income Range:</label>
+        <select id="incomeRange" name="incomeRange" required>
+          <option value="">Select</option>
+          <option value="less than 5 lakhs">Less than 5 lakhs</option>
+          <option value="5 lakhs - 10 lakhs">5 lakhs - 10 lakhs</option>
+          <option value="10 lakhs - 20 lakhs">10 lakhs - 20 lakhs</option>
+          <option value="More than 20 lakhs">More than 20 lakhs</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="employmentType">Type of Employment:</label>
+        <select id="employmentType" name="employmentType" required>
+          <option value="">Select</option>
+          <option value="Salaried">Salaried</option>
+          <option value="Self-employed">Self-employed</option>
+          <option value="Business owner">Business owner</option>
+          <option value="Unemployed">Unemployed</option>
+        </select>
+      </div>
+      <button type="submit">Start Video KYC</button>
+    </form>
+    <div id="videoContainer">
+      <!-- Placeholder for live video stream -->
+      <video id="liveVideo" autoplay></video>
+    </div>
+    <button id="captureButton">Capture Photo</button>
+    <div id="languageSelection">
+      <span>Select Language:</span>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="te">Telugu</option>
+        <option value="ta">Tamil</option>
+      </select>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 EleganceVerify. All rights reserved.</p>
+  </footer>
+
+  <!-- Add scripts for capturing video and processing form submission -->
+  <script src="script.js"></script>
+</body>
+</html>
